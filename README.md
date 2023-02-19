@@ -7,9 +7,7 @@
 
 
 ### CHANGE BOT
-- TOKEN
  - nano /root/regis/var.txt
  
  ### CHANGE TELE/WHTSAP
-- ADMIN
  - nano /root/id
