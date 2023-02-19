@@ -6,8 +6,8 @@
 ```bash regis/main```
 
 
-### CHANGE BOT
- - nano /root/regis/var.txt
+- CHANGE BOT
+``` nano /root/regis/var.txt ```
  
- ### CHANGE TELE/WHTSAP
- - nano /root/id
+- CHANGE TELE/WHTSAP
+ ``` nano /root/id```
