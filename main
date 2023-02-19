@@ -1,4 +1,24 @@
 #!/bin/bash
+clear
+UUID=$(tr </dev/urandom -dc a-z | head -c8)
+echo -e "   ┌──────────────────────────────────────────┐\033[0m"
+echo -e "   │\033[0m\033[101m       BOT SIMPLE FTVPN TELEGRAM          \033[0m|\033[0m"
+echo -e "   └──────────────────────────────────────────┘\033[0m"
+echo -e "            Telegram Bot Setup menu"
+echo -e "          make vpn in the telegram bot"
+echo -e "──────────────────────────────────────────────────"
+echo -e "   ${BLUE}get this value from @BotFather, required${NC}"
+echo -e "    ${BLUE}take your id at @MissRose_bot,cmd (/id)${NC}"
+echo -e "  ${BLUE}Tutorial? Join in the @fightertunnell group${NC}"
+echo -e "        ==>> CTRL + C GO TO BACK <<=="
+echo -e ""
+echo -e "            CONTOH : t.me/rullpqh"
+echo -e "        CONTOH : wa.me/6281584099035"
+echo -e "          ────────────────────────"
+read -e -p "Input your Bot Token : " TOKET
+read -e -p "Input your Id Telegram : " IDTELE
+read -e -p "Input your Telegram : " TELETT
+read -e -p "Input your Whatsapp : " WHTSAPP
 update_python() {
     echo "update repository python"
     apt install python3 python3-pip -y
@@ -44,13 +64,13 @@ WantedBy=multi-user.target
 
 EOF
     cat >id <<EOF
-TELEGRAM="t.me/rullpqh" #CONTOH t.me/rullpqh
-WHATSAPP="wa.me/6281584099035"  #CONTOH wa.me/6281584099035
+TELEGRAM="$TELETT" #CONTOH t.me/rullpqh
+WHATSAPP="$WHTSAPP"  #CONTOH wa.me/6281584099035
 EOF
     cat >regis/var.txt <<EOF
-BOT_TOKEN="6087646712:AAEg88w0QKfmYxULqlWOGhkudaNSURt_-iI"
-ADMIN="5579282429"
-SESSIONS="sdfddsferfreg" 
+BOT_TOKEN="$TOKET"
+ADMIN="$IDTELE"
+SESSIONS="${UUID}"
 EOF
     systemctl daemon-reload
     systemctl stop regggg
